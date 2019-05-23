@@ -50,6 +50,7 @@ module.exports = {
                 ],
             },
         },
+        `gatsby-plugin-styled-components`,
         {
             resolve: "gatsby-plugin-no-sourcemaps",
         },
