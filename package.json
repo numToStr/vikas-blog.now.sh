@@ -1,9 +1,19 @@
 {
-    "name": "gatsby-starter-default",
-    "private": true,
-    "description": "A simple starter to get up and developing quickly with Gatsby",
+    "name": "Portfolio",
+    "description": "Personal Portfolio build with Gatsby",
     "version": "0.1.0",
-    "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+    "author": "Vikas Raj <vikasraj1911@gmail.com>",
+    "scripts": {
+        "build": "gatsby build",
+        "develop": "gatsby develop",
+        "format": "prettier --write src/**/*.{js,jsx}",
+        "start": "npm run develop",
+        "serve": "gatsby serve",
+        "now-dev": "gatsby develop -p $PORT",
+        "now-build": "npm run build",
+        "deploy": "now --target production",
+        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    },
     "dependencies": {
         "gatsby": "^2.6.0",
         "gatsby-image": "^2.1.0",
@@ -28,25 +38,14 @@
         "dotenv": "^8.0.0",
         "prettier": "^1.17.1"
     },
-    "keywords": [
-        "gatsby"
-    ],
+    "keywords": ["gatsby"],
     "license": "MIT",
-    "scripts": {
-        "build": "gatsby build",
-        "develop": "gatsby develop",
-        "format": "prettier --write src/**/*.{js,jsx}",
-        "start": "npm run develop",
-        "serve": "gatsby serve",
-        "now-dev": "gatsby develop -p $PORT",
-        "now-build": "npm run build",
-        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
-    },
     "repository": {
         "type": "git",
-        "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+        "url": "git+https://github.com/vkasraj/blog.git"
     },
     "bugs": {
-        "url": "https://github.com/gatsbyjs/gatsby/issues"
-    }
+        "url": "https://github.com/vkasraj/blog/issues"
+    },
+    "homepage": "https://github.com/vkasraj/blog#readme"
 }
