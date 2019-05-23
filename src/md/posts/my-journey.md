@@ -1,5 +1,5 @@
 ---
-title: this is first page
+title: "My Journey"
 date: 2019-05-24
 ---
 
