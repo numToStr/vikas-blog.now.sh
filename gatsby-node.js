@@ -1,10 +1,25 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require("path");
+const dotenv = require("dotenv");
 
-// You can delete this file if you're not using it
-require("dotenv").config({
+dotenv.config({
     path: `.env.development`,
-})
+});
+
+module.exports.onCreateNode = ({ node, actions }) => {
+    const { createNodeField } = actions;
+
+    const {
+        internal: { type },
+        fileAbsolutePath,
+    } = node;
+
+    if (type === "MarkdownRemark") {
+        const filePath = path.parse(fileAbsolutePath);
+
+        createNodeField({
+            node,
+            name: "slug",
+            value: filePath.name,
+        });
+    }
+};
