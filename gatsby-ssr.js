@@ -6,7 +6,7 @@
 
 // You can delete this file if you're not using it
 import React from "react";
-import TopLayout from "./TopLayout";
+import TopLayout from "./src/components/TopLayout";
 
 export const wrapRootElement = ({ element }) => {
     return <TopLayout>{element}</TopLayout>;
