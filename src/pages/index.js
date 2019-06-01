@@ -1,12 +1,8 @@
 import React from "react";
-import Layout from "../components/Layout";
+import { Typography } from "@material-ui/core";
 
 const Index = () => {
-    return (
-        <Layout>
-            <p>Index</p>
-        </Layout>
-    );
+    return <Typography>Hello</Typography>;
 };
 
 export default Index;

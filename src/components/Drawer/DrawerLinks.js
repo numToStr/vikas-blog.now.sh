@@ -34,13 +34,10 @@ const config = { mass: 1, tension: 170, friction: 18 };
 export default ({ open, onTap }) => {
     const [hover, setHover] = useState(false);
 
-    // TODO: Just a hack, Need a better solution
     const handleClick = link => ev => {
         ev.preventDefault();
         onTap();
-        setTimeout(() => {
-            navigate(link);
-        }, 650);
+        navigate(link);
     };
 
     const trails = useTrail(links.length, {

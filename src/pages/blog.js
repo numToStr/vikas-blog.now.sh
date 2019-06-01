@@ -1,7 +1,5 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
-
-import Layout from "../components/Layout";
 
 const blog = () => {
     const {
@@ -34,10 +32,10 @@ const blog = () => {
     );
 
     return (
-        <Layout>
+        <Fragment>
             <h1>Blog</h1>
             <ol>{list}</ol>
-        </Layout>
+        </Fragment>
     );
 };
 
