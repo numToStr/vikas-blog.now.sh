@@ -1,9 +1,8 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import "../styles/index.scss";
 
 import Header from "./Header";
-import NewLayout from "./NewLayout";
 import { Typography } from "@material-ui/core";
 
 const Layout = ({ children }) => {
@@ -21,13 +20,13 @@ const Layout = ({ children }) => {
     `);
 
     return (
-        <NewLayout>
+        <Fragment>
             <Typography>
                 {siteMetadata.author} | {siteMetadata.title}
             </Typography>
             <Header />
             {children}
-        </NewLayout>
+        </Fragment>
     );
 };
 

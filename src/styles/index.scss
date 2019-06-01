@@ -4,7 +4,8 @@ body,
     overflow: hidden;
     height: 100%;
     position: relative;
-    & > div {
+    > div:first-child {
         @extend #___gatsby;
+        overflow-y: auto;
     }
 }
