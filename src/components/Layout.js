@@ -7,10 +7,8 @@ import Drawer from "./Drawer/Drawer";
 const Layout = ({ children }) => {
     return (
         <Fragment>
-            <BaseBorder>
-                <Drawer />
-                {children}
-            </BaseBorder>
+            <Drawer />
+            <BaseBorder>{children}</BaseBorder>
         </Fragment>
     );
 };
