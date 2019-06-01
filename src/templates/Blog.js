@@ -22,10 +22,12 @@ const Blog = ({
 }) => {
     return (
         <Layout>
-            <div>This is Blog Page</div>
-            <p>{frontmatter.title}</p>
-            <p>{frontmatter.date}</p>
-            <div dangerouslySetInnerHTML={{ __html: html }} />
+            <div style={{ flexGrow: 1, padding: "1rem", overflowY: "auto" }}>
+                <div>This is Blog Page</div>
+                <p>{frontmatter.title}</p>
+                <p>{frontmatter.date}</p>
+                <div dangerouslySetInnerHTML={{ __html: html }} />
+            </div>
         </Layout>
     );
 };

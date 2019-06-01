@@ -1,9 +1,0 @@
-.header {
-    display: flex;
-    a {
-        &:not(:last-child) {
-            padding: 0 1rem 0 0;
-        }
-        color: #3e3e3e;
-    }
-}

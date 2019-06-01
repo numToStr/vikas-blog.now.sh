@@ -1,9 +1,10 @@
 import React, { Fragment } from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import { Typography } from "@material-ui/core";
 import "../styles/index.scss";
 
 import Header from "./Header";
-import { Typography } from "@material-ui/core";
+import BaseBorder from "./Base/BaseBorder";
 
 const Layout = ({ children }) => {
     const {
@@ -21,11 +22,13 @@ const Layout = ({ children }) => {
 
     return (
         <Fragment>
-            <Typography>
-                {siteMetadata.author} | {siteMetadata.title}
-            </Typography>
-            <Header />
-            {children}
+            <BaseBorder>
+                <Typography>
+                    {siteMetadata.author} | {siteMetadata.title}
+                </Typography>
+                <Header />
+                {children}
+            </BaseBorder>
         </Fragment>
     );
 };

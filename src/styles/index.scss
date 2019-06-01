@@ -6,6 +6,5 @@ body,
     position: relative;
     > div:first-child {
         @extend #___gatsby;
-        overflow-y: auto;
     }
 }
