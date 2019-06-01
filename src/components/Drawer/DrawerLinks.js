@@ -1,14 +1,15 @@
 import React, { useState } from "react";
+import { styled } from "@material-ui/styles";
 import { navigate } from "gatsby";
-import styled from "styled-components";
 import { animated, useTrail } from "react-spring";
+import useMobile from "../../hooks/useMobile";
 
-const LinkDiv = styled(animated.div)`
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 0.8rem 0;
-    line-height: normal;
-`;
+const LinkDiv = styled(animated.div)({
+    textTransform: "uppercase",
+    fontWeight: "bold",
+    margin: "0.8rem 0",
+    lineHeight: "normal",
+});
 
 const links = [
     {
@@ -34,6 +35,10 @@ const config = { mass: 1, tension: 170, friction: 18 };
 export default ({ open, onTap }) => {
     const [hover, setHover] = useState(false);
 
+    const isMobile = useMobile();
+
+    const fontSize = isMobile ? 2 : 5;
+
     const handleClick = link => ev => {
         ev.preventDefault();
         onTap();
@@ -51,7 +56,7 @@ export default ({ open, onTap }) => {
         to: {
             opacity: open ? 1 : 0,
             xy: open ? [0, 0] : [-50, -200],
-            fontSize: open ? 5 : 0,
+            fontSize: open ? fontSize : 0,
             letterSpacing: hover ? 20 : 10,
             color: hover ? "#ff0" : "#fff",
         },
