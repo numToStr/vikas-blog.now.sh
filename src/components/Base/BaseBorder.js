@@ -19,8 +19,14 @@ const BaseBorder = styled.div`
     position: relative;
 `;
 
+const Container = styled.div`
+    flex-grow: 1;
+`;
+
 export default ({ children }) => (
     <BasePadding>
-        <BaseBorder>{children}</BaseBorder>
+        <BaseBorder>
+            <Container>{children}</Container>
+        </BaseBorder>
     </BasePadding>
 );

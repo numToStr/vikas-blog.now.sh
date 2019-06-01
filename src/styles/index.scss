@@ -8,3 +8,8 @@ body,
         @extend #___gatsby;
     }
 }
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
