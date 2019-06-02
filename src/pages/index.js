@@ -21,7 +21,7 @@ const Index = () => {
 
     return (
         <Fragment>
-            <SEO title="Home | Vikas Raj" />
+            <SEO title="Home" />
             <Box
                 height="100%"
                 display="flex"

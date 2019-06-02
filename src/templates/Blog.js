@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { graphql } from "gatsby";
+import SEO from "../components/SEO";
 
 export const data = graphql`
     query($slug: String!) {
@@ -19,12 +20,15 @@ const Blog = ({
     },
 }) => {
     return (
-        <div style={{ flexGrow: 1, padding: "1rem", overflowY: "auto" }}>
-            <div>This is Blog Page</div>
-            <p>{frontmatter.title}</p>
-            <p>{frontmatter.date}</p>
-            <div dangerouslySetInnerHTML={{ __html: html }} />
-        </div>
+        <Fragment>
+            <SEO title={frontmatter.title} />
+            <div style={{ flexGrow: 1, padding: "1rem", overflowY: "auto" }}>
+                <div>This is Blog Page</div>
+                <p>{frontmatter.title}</p>
+                <p>{frontmatter.date}</p>
+                <div dangerouslySetInnerHTML={{ __html: html }} />
+            </div>
+        </Fragment>
     );
 };
 

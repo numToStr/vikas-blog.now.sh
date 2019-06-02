@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
+import SEO from "../components/SEO";
 
 const blog = () => {
     const {
@@ -33,6 +34,7 @@ const blog = () => {
 
     return (
         <Fragment>
+            <SEO title="Blog" />
             <h1>Blog</h1>
             <ol>{list}</ol>
         </Fragment>

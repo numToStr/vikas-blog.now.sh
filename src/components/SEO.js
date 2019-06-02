@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import useSiteMetadata from "../hooks/useSiteMetadata";
 
-function SEO({ lang, title }) {
+const SEO = ({ lang, title }) => {
     const { title: siteTitle, description, author } = useSiteMetadata();
 
     return (
@@ -11,7 +11,7 @@ function SEO({ lang, title }) {
                 lang,
             }}
             title={title}
-            titleTemplate={`%s | ${siteTitle}`}
+            titleTemplate={`%s | ${author} | ${siteTitle}`}
             meta={[
                 {
                     name: `description`,
@@ -48,7 +48,7 @@ function SEO({ lang, title }) {
             ]}
         />
     );
-}
+};
 
 SEO.defaultProps = {
     lang: `en`,
