@@ -6,9 +6,9 @@ import { animated, useTrail } from "react-spring";
 const LinkDiv = styled(animated.div)(({ theme: { breakpoints } }) => ({
     textTransform: "uppercase",
     fontWeight: "bold",
-    margin: "0.8rem 0",
+    margin: "0 0 1rem",
     lineHeight: "normal",
-    fontSize: "4rem",
+    fontSize: "3.5rem",
     [breakpoints.down("sm")]: {
         fontSize: "2rem",
     },
