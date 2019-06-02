@@ -14,7 +14,7 @@ export default function TopLayout({ children }) {
                     content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
                 />
                 <link
-                    href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
+                    href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500&display=swap"
                     rel="stylesheet"
                 />
             </Helmet>
