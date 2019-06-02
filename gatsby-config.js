@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
-        title: `My Personal Blog`,
-        description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+        title: `Full Stack Developer`,
+        description: `A Full Stack Developer who loves to make new things.`,
         author: `Vikas Raj`,
         social: {
             twitter: "@numberToString",
@@ -56,6 +56,14 @@ module.exports = {
         },
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-material-ui`,
+        {
+            resolve: "gatsby-plugin-react-svg",
+            options: {
+                rule: {
+                    include: /images/, // See below to configure properly
+                },
+            },
+        },
         {
             resolve: "gatsby-plugin-no-sourcemaps",
         },

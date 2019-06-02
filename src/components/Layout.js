@@ -2,12 +2,12 @@ import React, { Fragment } from "react";
 import "../styles/index.scss";
 
 import BaseBorder from "./Base/BaseBorder";
-import Drawer from "./Drawer/Drawer";
+// import Drawer from "./Drawer/Drawer";
 
 const Layout = ({ children }) => {
     return (
         <Fragment>
-            <Drawer />
+            {/* <Drawer /> */}
             <BaseBorder>{children}</BaseBorder>
         </Fragment>
     );
